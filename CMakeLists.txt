@@ -17,8 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
 #   PATHS "/usr/local/opt/opencv/3.4.0"
 #   NO_DEFAULT_PATH
 #   )
-find_package(OpenCV 3.4.0 REQUIRED PATHS "/usr/local/opt/opencv/3.4.0")
-include_directories("/usr/local/opt/opencv/3.4.0/include")
+find_package(OpenCV REQUIRED)
+# include_directories("/usr/local/opt/opencv/3.4.0/include")
+include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIRS})
 
 
