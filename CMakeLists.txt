@@ -15,7 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 ## System dependencies are found with CMake's conventions
-find_package(OpenCV REQUIRED
+find_package(OpenCV 3.4.0 REQUIRED
   NO_MODULE
   PATHS "/usr/local/opt/opencv/3.4.0"
   NO_DEFAULT_PATH
