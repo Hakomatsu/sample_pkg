@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <group ns="sample_code">
+    <rosparam file="$(find sample_pkg)/config/image_params.yaml" command="load"/>
+  </group>
+  <node pkg="sample_pkg" type="sample_code" name="sample_code" output="screen"/>
+</launch>
+
