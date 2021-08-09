@@ -12,14 +12,14 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(OpenCV 3.4.0 REQUIRED
-#   NO_MODULE
-#   PATHS "/usr/local/opt/opencv/3.4.0"
-#   NO_DEFAULT_PATH
-#   )
-find_package(OpenCV REQUIRED)
-# include_directories("/usr/local/opt/opencv/3.4.0/include")
-include_directories(${OpenCV_INCLUDE_DIRS})
+find_package(OpenCV 3.4.0 REQUIRED
+  NO_MODULE
+  PATHS "/usr/local/opt/opencv/3.4.0"
+  NO_DEFAULT_PATH
+  )
+# find_package(OpenCV REQUIRED)
+include_directories("/usr/local/opt/opencv/3.4.0/include")
+# include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIRS})
 
 
@@ -128,6 +128,7 @@ include_directories(
 
 # string(REPLACE "/usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0;" "/usr/local/opt/opencv/3.4.0/lib/libopencv_core.so.3.4.0;" catkin_LIBRARIES "${catkin_LIBRARIES}")
 # string(REPLACE "/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0;" "/usr/local/opt/opencv/3.4.0/lib/libopencv_imgproc.so.3.4.0;" catkin_LIBRARIES "${catkin_LIBRARIES}")
+# string(REPLACE "/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.3.2.0;" "/usr/local/opt/opencv/3.4.0/lib/libopencv_highgui.so.3.4.0;" catkin_LIBRARIES "${catkin_LIBRARIES}")
 
 add_executable(sample_code src/sample_code.cpp)
 target_link_libraries(sample_code
